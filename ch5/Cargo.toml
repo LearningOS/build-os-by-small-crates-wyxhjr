@@ -1,0 +1,22 @@
+[package]
+name = "ch5"
+version = "0.0.1"
+edition = "2021"
+authors = ["zflcs <1491657576@qq.com>"]
+
+[dependencies]
+sbi-rt = { version = "0.0.2", features = ["legacy"] }
+xmas-elf = "0.8.0"
+riscv = "0.9"
+spin = "0.9.4"
+
+linker = { path = "../linker" }
+console = { path = "../console" }
+kernel-context = { path = "../kernel-context" }
+kernel-alloc = { path = "../kernel-alloc" }
+kernel-vm = { path = "../kernel-vm" }
+syscall = { path = "../syscall", features = ["kernel"] }
+task-manage = { path = "../task-manage" }
+
+[build-dependencies]
+linker = { path = "../linker" }
